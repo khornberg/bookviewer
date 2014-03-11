@@ -1,0 +1,182 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Book Viewer</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css styles/vendor.css -->
+    <link rel="stylesheet" href="bower_components/semantic/build/minified/collections/grid.min.css">
+    <link rel="stylesheet" href="bower_components/semantic/build/minified/collections/menu.min.css">
+    <link rel="stylesheet" href="bower_components/semantic/build/minified/collections/message.min.css">
+    <link rel="stylesheet" href="bower_components/semantic/build/minified/elements/button.min.css">
+    <link rel="stylesheet" href="bower_components/semantic/build/minified/elements/divider.min.css">
+    <link rel="stylesheet" href="bower_components/semantic/build/minified/elements/header.min.css">
+    <link rel="stylesheet" href="bower_components/semantic/build/minified/elements/icon.min.css">
+    <link rel="stylesheet" href="bower_components/semantic/build/minified/elements/input.min.css">
+    <link rel="stylesheet" href="bower_components/semantic/build/minified/elements/segment.min.css">
+    <link rel="stylesheet" href="bower_components/semantic/build/minified/modules/sidebar.min.css">
+    <link rel="stylesheet" href="bower_components/semantic/build/minified/views/item.min.css">
+    <link rel="stylesheet" href="bower_components/semantic/build/minified/views/list.min.css">
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Open+Sans:300italic,400,300,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body id="home">
+    <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <header class="ui page grid masthead segment">
+        <div class="column">
+            <div class="ui inverted information">
+                <h1 class="ui inverted header">Read a book!</h1>
+                <p>You can read books here. Select a book from the book list on the left. Enjoy!</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- sidebar button -->
+    <aside class="ui right attached black launch button">
+        <i class="icon list layout"></i>
+        <span class="text">Books</span>
+    </aside>
+
+    <!-- features -->
+    <section id="features" class="ui page grid overview segment">
+        <div class="ui two wide column"></div>
+        <div class="twelve wide column">
+            <div class="ui three column center aligned stackable divided grid">
+                <div class="column">
+                    <div class="ui icon header">
+                        <i class="circular plane link icon"></i>
+                        On the go
+                    </div>
+                    <p>Read on the go with this book viewer because it is offline capable</p>
+                    <p><a class="ui blue right labeled icon button" href="#">Learn <i class="right long arrow icon"></i></a>
+                    </p>
+                </div>
+                <div class="column">
+                    <div class="ui icon header">
+                        <i class="circular book link icon"></i>
+                        Library
+                    </div>
+                    <p>Browse the great selection of Latin, French, and English literature</p>
+                    <p><a class="ui blue right labeled icon button" href="#">Research <i class="right long arrow icon"></i></a>
+                    </p>
+                </div>
+                <div class="column">
+                    <div class="ui icon header">
+                        <i class="circular shield link icon"></i>
+                        Secure
+                    </div>
+                    <p>No need to log in to read your books; everything is stored on your device</p>
+                    <p><a class="ui blue right labeled icon button" href="#">Share <i class="right long arrow icon"></i></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- sidebar -->
+    <section id="books" class="ui inverted sidebar vertical menu">
+        <div class="item">
+            <div class="ui input">
+                <input type="text" class="search" placeholder="Search...">
+            </div>
+        </div>
+        <div class="list">
+            <a class="item" data-book="books-crusoe_json" href="#"><div class="header">Robinson Crusoe</div><span class="author">by Defoe, Daniel</span></a>
+<a class="item" data-book="books-divinecomedy_json" href="#"><div class="header">Divine Comedy</div><span class="author">by Alighieri, Dante (1265-1321)</span></a>
+<a class="item" data-book="books-holywar_json" href="#"><div class="header">The Holy War</div><span class="author">by Bunyan, John</span></a>
+<a class="item" data-book="books-pilgrim_json" href="#"><div class="header">The Pilgrim's Progress</div><span class="author">by Bunyan, John (1628-1688)</span></a>
+<a class="item" data-book="books-poems_json" href="#"><div class="header">Poems of St. Teresa, Carmelite of Lisieux, known as the 'Little Flower of Jesus'</div><span class="author">by Therese, of Lisieux, Saint (1873-1897)</span></a>
+<a class="item" data-book="books-thursday_json" href="#"><div class="header">The Man Who Was Thursday</div><span class="author">by Chesterton, G.K. (1874-1936)</span></a>
+<a class="item" data-book="books-tracts_json" href="#"><div class="header">The Theological Tractates</div><span class="author">by Boethius, Anicius Manlius Torquatus Severinus (480-524)</span></a>
+<a class="item" data-book="books-treesofpride_json" href="#"><div class="header">The Trees of Pride</div><span class="author">by Chesterton, G.K. (1874-1936)</span></a>
+
+        </div>
+    </section>
+
+    <!-- abstracts -->
+    <section class="ui page grid">
+        <div class="column">
+            <div id="abstract-books-crusoe_json" class="ui piled segment hide"><div class="item"><div class="ui tiny green read button right floated">Read</div><h2>Robinson Crusoe</h2><div class="ui list"><span class="item"><i class="right triangle icon"></i> Creator(s): Defoe, Daniel</span><span class="item"><i class="right triangle icon"></i> Print Basis: London: Hodder and Stoughton, 1904</span><span class="item"><i class="right triangle icon"></i> Rights: Public Domain</span><span class="item"><i class="right triangle icon"></i> CCEL Subjects: All  Fiction</span><span class="item"><i class="right triangle icon"></i> LC Call no: PR3403.A1</span><span class="item"><i class="right triangle icon"></i> LC Subjects: English literature  17th and 18th centuries (1640-1770)</span><div class="ui section divider"></div> </div> <p>I was born in the year 1632, in the city of York, of a good family, though not of that country, my father being a foreigner of Bremen, who settled first at Hull. He got a good estate by merchandise, and leaving off his trade lived afterward at York, from whence he had married my mother, whose relations were named Robinson, a good family in that country, and from whom I was called Robinson Kreutznear; but by the usual corruption of words in England we are now called, nay, we call ourselves, and write our name, Crusoe, and so my companions always called me. I had two elder brothers, one of which was lieutenant-colonel to an English regiment of foot in Flanders, formerly commanded by the famous Colonel Lockhart, and was killed at the battle near Dunkirk against the Spaniards; what became of my second brother I never knew, any more than my father and mother did know what was become of me. Being the third son of the family, and not bred to any trade, my head began to be filled very early with rambling thoughts. My father, who was very ancient, had given me a competent share of learning, as far as house-education and a country free school generally goes, and designed me for the law, but I would be satisfied with nothing but going to sea; and my inclination to this led me so strongly against the will, nay, the commands, of my father, and against all the entreaties and persuasions of my mother and other friends, that there seemed to be something fatal in that propension of nature tending directly to the life of misery which was to befall me.</p> </div> </div>
+<div id="abstract-books-divinecomedy_json" class="ui piled segment hide"><div class="item"><div class="ui tiny green read button right floated">Read</div><h2>Divine Comedy</h2><div class="ui list"><span class="item"><i class="right triangle icon"></i> Creator(s): Alighieri, Dante (1265-1321)</span><span class="item"><i class="right triangle icon"></i> Rights: Public Domain</span><span class="item"><i class="right triangle icon"></i> CCEL Subjects: All </span><span class="item"><i class="right triangle icon"></i> Translated by: Henry Wadsworth Longfellow</span><div class="ui section divider"></div> </div> <p>The base text for this edition has been provided by Digital Dante, a project sponsored by Columbia University's Institute for Learning Technologies. Specific thanks goes to Jennifer Hogan (Project Editor/Director), Tanya Larkin (Assistant to Editor), Robert W. Cole (Proofreader/Assistant Editor), and Jennifer Cook (Proofreader). The Digital Dante Project is a digital 'study space' for Dante studies and scholarship. The project is multi-faceted and fluid by nature of the Web. Digital Dante attempts to organize the information most significant for students first engaging with Dante and scholars researching Dante. The digital of Digital Dante incurs a new challenge to the student, the scholar, and teacher, perusing the Web: to become proficient in the new tools, e.g., Search, the Discussion Group, well enough to look beyond the technology and delve into the content. For more information and access to the project, please visit its web site at: http://www.ilt.columbia.edu/projects/dante/ For this Project Gutenberg edition the e-text was rechecked. The editor greatly thanks Dian McCarthy for her assistance in proofreading the Paradiso. Also deserving praise are Herbert Fann for programming the text editor "Desktop Tools/Edit" and the late August Dvorak for designing his keyboard layout. Please refer to Project Gutenberg's e-text listings for other editions or translations of 'The Divine Comedy.' Please refer to the end of this file for supplemental materials. Dennis McCarthy, July 1997 imprimatur@juno.com</p> </div> </div>
+<div id="abstract-books-holywar_json" class="ui piled segment hide"><div class="item"><div class="ui tiny green read button right floated">Read</div><h2>The Holy War</h2><div class="ui list"><span class="item"><i class="right triangle icon"></i> Creator(s): Bunyan, John</span><span class="item"><i class="right triangle icon"></i> Rights: Public Domain</span><span class="item"><i class="right triangle icon"></i> CCEL Subjects: All  Fiction</span><span class="item"><i class="right triangle icon"></i> LC Call no: PR3329 .H1 2001</span><span class="item"><i class="right triangle icon"></i> LC Subjects: English literature</span><div class="ui section divider"></div> </div> <p>Tis strange to me, that they that love to tell Things done of old, yea, and that do excel Their equals in historiology, Speak not of Mansoul's wars, but let them lie Dead, like old fables, or such worthless things, That to the reader no advantage brings: When men, let them make what they will their own, Till they know this, are to themselves unknown. Of stories, I well know, there's divers sorts, Some foreign, some domestic; and reports Are thereof made as fancy leads the writers. (By books a man may guess at the inditers.) Some will again of that which never was, Nor will be, feign (and that without a cause) Such matter, raise such mountains, tell such things Of men, of laws, of countries, and of kings; John Bunyan.</p> </div> </div>
+<div id="abstract-books-pilgrim_json" class="ui piled segment hide"><div class="item"><div class="ui tiny green read button right floated">Read</div><h2>The Pilgrim's Progress</h2><div class="ui list"><span class="item"><i class="right triangle icon"></i> Creator(s): Bunyan, John (1628-1688)</span><span class="item"><i class="right triangle icon"></i> Rights: Public Domain</span><span class="item"><i class="right triangle icon"></i> CCEL Subjects: All  Classic  Fiction</span><span class="item"><i class="right triangle icon"></i> LC Call no: PR3300</span><span class="item"><i class="right triangle icon"></i> LC Subjects: English literature  17th and 18th centuries (1640-1770)</span><div class="ui section divider"></div> </div> <p>WHEN at the first I took my pen in hand Thus for to write, I did not understand That I at all should make a little book In such a mode: nay, I had undertook To make another; which, when almost done, Before I was aware I this begun. And thus it was: I, writing of the way And race of saints in this our gospel-day, Fell suddenly into an allegory About their journey, and the way to glory, In more than twenty things which I set down This done, I twenty more had in my crown, And they again began to multiply, Like sparks that from the coals of fire do fly. Nay, then, thought I, if that you breed so fast, I'll put you by yourselves, lest you at last Should prove ad infinitum, and eat out The book that I already am about. Well, so I did; but yet I did not think To show to all the world my pen and ink In such a mode; I only thought to make I knew not what: nor did I undertake Thereby to please my neighbor; no, not I; I did it my own self to gratify. Neither did I but vacant seasons spend In this my scribble; nor did I intend But to divert myself, in doing this, From worser thoughts, which make me do amiss. JOHN BUNYAN.</p> </div> </div>
+<div id="abstract-books-poems_json" class="ui piled segment hide"><div class="item"><div class="ui tiny green read button right floated">Read</div><h2>Poems of St. Teresa, Carmelite of Lisieux, known as the 'Little Flower of Jesus'</h2><div class="ui list"><span class="item"><i class="right triangle icon"></i> Creator(s): Therese, of Lisieux, Saint (1873-1897)</span><span class="item"><i class="right triangle icon"></i> CCEL Subjects: All  Classic  Mysticism </span><span class="item"><i class="right triangle icon"></i> LC Call no: PQ2450.T16</span><span class="item"><i class="right triangle icon"></i> LC Subjects: French literature  Modern literature (Individual authors)  19th century</span><div class="ui section divider"></div> </div> <p>MARIE FRANCOISE-THERESE MARTIN, daughter of Louis-Joseph-Stanislaus and Zelie (Guerin) Martin, was born in Alencon, France, January 2, 1873. She was the youngest of nine children, four of whom died in infancy, and of the five others, four became Carmelite nuns. Therese, a singularly precocious, charming and beautiful child set her heart upon entering the convent at the age of fifteen. Her wish was granted nearly to the letter, for on April 9, 1888, when only a little more than three months past her fifteenth birthday, she was received into the Carmelite monastery of the Sacred Heart of Jesus and of the Immaculate Conception, at Lisieux, France. There she lived for nine years a life of remarkably joyous and childlike -- or angelic -- holiness; and there September 30, 1897, she died.</p> </div> </div>
+<div id="abstract-books-thursday_json" class="ui piled segment hide"><div class="item"><div class="ui tiny green read button right floated">Read</div><h2>The Man Who Was Thursday</h2><div class="ui list"><span class="item"><i class="right triangle icon"></i> Creator(s): Chesterton, G.K. (1874-1936)</span><span class="item"><i class="right triangle icon"></i> Print Basis: First published 1908</span><span class="item"><i class="right triangle icon"></i> Rights: Public Domain</span><span class="item"><i class="right triangle icon"></i> CCEL Subjects: All  Fiction  Proofed</span><span class="item"><i class="right triangle icon"></i> LC Call no: PR4453</span><span class="item"><i class="right triangle icon"></i> LC Subjects: English literature</span><div class="ui section divider"></div> </div> <p>To Edmund Clerihew Bentley A cloud was on the mind of men, and wailing went the weather, Yea, a sick cloud upon the soul when we were boys together. Science announced nonentity and art admired decay; The world was old and ended: but you and I were gay; Round us in antic order their crippled vices came-- Lust that had lost its laughter, fear that had lost its shame. Like the white lock of Whistler, that lit our aimless gloom, Men showed their own white feather as proudly as a plume. Life was a fly that faded, and death a drone that stung; The world was very old indeed when you and I were young. They twisted even decent sin to shapes not to be named: Men were ashamed of honour; but we were not ashamed. Weak if we were and foolish, not thus we failed, not thus; When that black Baal blocked the heavens he had no hymns from us Children we were--our forts of sand were even as weak as eve, High as they went we piled them up to break that bitter sea. Fools as we were in motley, all jangling and absurd, When all church bells were silent our cap and bells were heard. Not all unhelped we held the fort, our tiny flags unfurled; Some giants laboured in that cloud to lift it from the world. I find again the book we found, I feel the hour that flings Far out of fish?shaped Paumanok some cry of cleaner things; And the Green Carnation withered, as in forest fires that pass, Roared in the wind of all the world ten million leaves of grass; Or sane and sweet and sudden as a bird sings in the rain-- Truth out of Tusitala spoke and pleasure out of pain. Yea, cool and clear and sudden as a bird sings in the grey, Dunedin to Samoa spoke, and darkness unto day. But we were young; we lived to see God break their bitter charms. God and the good Republic come riding back in arms: We have seen the City of Mansoul, even as it rocked, relieved-- Blessed are they who did not see, but being blind, believed. This is a tale of those old fears, even of those emptied hells, And none but you shall understand the true thing that it tells-- Of what colossal gods of shame could cow men and yet crash, Of what huge devils hid the stars, yet fell at a pistol flash. The doubts that were so plain to chase, so dreadful to withstand-- Oh, who shall understand but you; yea, who shall understand? The doubts that drove us through the night as we two talked amain, And day had broken on the streets e'er it broke upon the brain. Between us, by the peace of God, such truth can now be told; Yea, there is strength in striking root and good in growing old. We have found common things at last and marriage and a creed, And I may safely write it now, and you may safely read. G. K. C.</p> </div> </div>
+<div id="abstract-books-tracts_json" class="ui piled segment hide"><div class="item"><div class="ui tiny green read button right floated">Read</div><h2>The Theological Tractates</h2><div class="ui list"><span class="item"><i class="right triangle icon"></i> Creator(s): Boethius, Anicius Manlius Torquatus Severinus (480-524)</span><span class="item"><i class="right triangle icon"></i> Print Basis: London: W. Heinemann; New York: G.P. Putnam's Sons, 1918</span><span class="item"><i class="right triangle icon"></i> Rights: Public Domain</span><span class="item"><i class="right triangle icon"></i> CCEL Subjects: All  Early Church  Theology</span><span class="item"><i class="right triangle icon"></i> LC Call no: PA6156.B7</span><span class="item"><i class="right triangle icon"></i> LC Subjects: Roman literature</span><div class="ui section divider"></div> </div> <p>IN preparing the text of the Consolatio I have used the apparatus in Peiper's edition (Teubner, 1871), since his reports, as I know in the case of the Tegernseensis, are generally accurate and complete; I have depended also on my own collations or excerpts from various of the important manuscripts, nearly all of which I have at least examined, and I have also followed, not always but usually, the opinions of Engelbrecht in his admirable article, Die Consolatio Philosophiae des Boethius in the Sitzungsberichte of the Vienna Academy, cxliv. (1902) 1-60. The present text, then, has been constructed from only part of the material with which an editor should reckon, though the reader may at least assume that every reading in the text has, unless otherwise stated, the authority of some manuscript of the ninth or tenth century; in certain orthographical details, evidence from the text of the Opuscula Sacra has been used without special mention of this fact. We look to August Engelbrecht for the first critical edition of the Consolatio at, we hope, no distant date. The text of the 0puscula Sacra is based on my own collations of all the important manuscripts of these works. An edition with complete apparatus criticus will be ready before long for the Vienna Corpus Scriptorum Ecclesiasticorum Latinorum. The history of the text of the Opuscula Sacra, as I shall attempt to show elsewhere, is intimately connected with that of the Consolatio. E. K. R.</p> </div> </div>
+<div id="abstract-books-treesofpride_json" class="ui piled segment hide"><div class="item"><div class="ui tiny green read button right floated">Read</div><h2>The Trees of Pride</h2><div class="ui list"><span class="item"><i class="right triangle icon"></i> Creator(s): Chesterton, G.K. (1874-1936)</span><span class="item"><i class="right triangle icon"></i> CCEL Subjects: All  Fiction  MP3 </span><span class="item"><i class="right triangle icon"></i> LC Call no: PR4453</span><span class="item"><i class="right triangle icon"></i> LC Subjects: English literature</span><div class="ui section divider"></div> </div> <p>Squire Vane was an elderly schoolboy of English education and Irish extraction. His English education, at one of the great public schools, had preserved his intellect perfectly and permanently at the stage of boyhood. But his Irish extraction subconsciously upset in him the proper solemnity of an old boy, and sometimes gave him back the brighter outlook of a naughty boy. He had a bodily impatience which played tricks upon him almost against his will, and had already rendered him rather too radiant a failure in civil and diplomatic service. Thus it is true that compromise is the key of British policy, especially as effecting an impartiality among the religions of India; but Vane's attempt to meet the Moslem halfway by kicking off one boot at the gates of the mosque, was felt not so much to indicate true impartiality as something that could only be called an aggressive indifference. Again, it is true that an English aristocrat can hardly enter fully into the feelings of either party in a quarrel between a Russian Jew and an Orthodox procession carrying relics; but Vane's idea that the procession might carry the Jew as well, himself a venerable and historic relic, was misunderstood on both sides. In short, he was a man who particularly prided himself on having no nonsense about him; with the result that he was always doing nonsensical things. He seemed to be standing on his head merely to prove that he was hard-headed.</p> </div> </div>
+
+        </div>
+    </section>
+
+    <!-- book -->
+    <section class="hide ui page grid segment book"><div class="column center aligned"><i class="huge loading icon"></i></div></section>
+
+    <footer class="ui inverted black page grid segment">
+        <div class="ui two wide column"></div>
+        <div class="twelve wide column">
+            <div class="ui three column stackable grid">
+                <div class="column">
+                    <div class="ui header">Library</div>
+                    <div class="ui inverted link list">
+                        <a class="item">Request Book</a>
+                        <a class="item">Book Release Calendar</a>
+                        <a class="item">Rejected Books</a>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui header">Community</div>
+                    <div class="ui inverted link list">
+                        <a class="item" href="https://github.com/khornberg/bookviewer"><i class="github icon"></i>Contirbute Code</a>
+                        <a class="item">Careers</a>
+                        <a class="item">Privacy Policy</a>
+                    </div>
+                </div>
+                <div class="column enter aligned">
+                    <h3 class="ui header">Contact Us</h3>
+                    <addr>
+                        0900 Stratford upon Avon
+                        <br>Minneapolis, MN
+                        <br>
+                    </addr>
+                    <p>(404) 200-0500</p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <!-- endbower -->
+    <script src="bower_components/semantic/build/minified/modules/sidebar.min.js"></script>
+    <script src="bower_components/list.js/dist/list.min.js"></script>
+    <script src="bower_components/davis/davis.min.js"></script>
+    <script src="bower_components/es6-promise/dist/promise-0.1.1.min.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js({app,.tmp}) scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>

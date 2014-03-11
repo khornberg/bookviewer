@@ -1,0 +1,166 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Book Viewer</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css styles/vendor.css -->
+    <link rel="stylesheet" href="bower_components/semantic/build/minified/collections/grid.min.css">
+    <link rel="stylesheet" href="bower_components/semantic/build/minified/collections/menu.min.css">
+    <link rel="stylesheet" href="bower_components/semantic/build/minified/collections/message.min.css">
+    <link rel="stylesheet" href="bower_components/semantic/build/minified/elements/button.min.css">
+    <link rel="stylesheet" href="bower_components/semantic/build/minified/elements/divider.min.css">
+    <link rel="stylesheet" href="bower_components/semantic/build/minified/elements/header.min.css">
+    <link rel="stylesheet" href="bower_components/semantic/build/minified/elements/icon.min.css">
+    <link rel="stylesheet" href="bower_components/semantic/build/minified/elements/input.min.css">
+    <link rel="stylesheet" href="bower_components/semantic/build/minified/elements/segment.min.css">
+    <link rel="stylesheet" href="bower_components/semantic/build/minified/modules/sidebar.min.css">
+    <link rel="stylesheet" href="bower_components/semantic/build/minified/views/item.min.css">
+    <link rel="stylesheet" href="bower_components/semantic/build/minified/views/list.min.css">
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Open+Sans:300italic,400,300,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body id="home">
+    <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <header class="ui page grid masthead segment">
+        <div class="column">
+            <div class="ui inverted information">
+                <h1 class="ui inverted header">Read a book!</h1>
+                <p>You can read books here. Select a book from the book list on the left. Enjoy!</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- sidebar button -->
+    <aside class="ui right attached black launch button">
+        <i class="icon list layout"></i>
+        <span class="text">Books</span>
+    </aside>
+
+    <!-- features -->
+    <section id="features" class="ui page grid overview segment">
+        <div class="ui two wide column"></div>
+        <div class="twelve wide column">
+            <div class="ui three column center aligned stackable divided grid">
+                <div class="column">
+                    <div class="ui icon header">
+                        <i class="circular plane link icon"></i>
+                        On the go
+                    </div>
+                    <p>Read on the go with this book viewer because it is offline capable</p>
+                    <p><a class="ui blue right labeled icon button" href="#">Learn <i class="right long arrow icon"></i></a>
+                    </p>
+                </div>
+                <div class="column">
+                    <div class="ui icon header">
+                        <i class="circular book link icon"></i>
+                        Library
+                    </div>
+                    <p>Browse the great selection of Latin, French, and English literature</p>
+                    <p><a class="ui blue right labeled icon button" href="#">Research <i class="right long arrow icon"></i></a>
+                    </p>
+                </div>
+                <div class="column">
+                    <div class="ui icon header">
+                        <i class="circular shield link icon"></i>
+                        Secure
+                    </div>
+                    <p>No need to log in to read your books; everything is stored on your device</p>
+                    <p><a class="ui blue right labeled icon button" href="#">Share <i class="right long arrow icon"></i></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- sidebar -->
+    <section id="books" class="ui inverted sidebar vertical menu">
+        <div class="item">
+            <div class="ui input">
+                <input type="text" class="search" placeholder="Search...">
+            </div>
+        </div>
+        <div class="list">
+            @@include('books/books-menu.html')
+        </div>
+    </section>
+
+    <!-- abstracts -->
+    <section class="ui page grid">
+        <div class="column">
+            @@include('books/books-abstracts.html')
+        </div>
+    </section>
+
+    <!-- book -->
+    <section class="hide ui page grid segment book"><div class="column center aligned"><i class="huge loading icon"></i></div></section>
+
+    <footer class="ui inverted black page grid segment">
+        <div class="ui two wide column"></div>
+        <div class="twelve wide column">
+            <div class="ui three column stackable grid">
+                <div class="column">
+                    <div class="ui header">Library</div>
+                    <div class="ui inverted link list">
+                        <a class="item">Request Book</a>
+                        <a class="item">Book Release Calendar</a>
+                        <a class="item">Rejected Books</a>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui header">Community</div>
+                    <div class="ui inverted link list">
+                        <a class="item" href="https://github.com/khornberg/bookviewer"><i class="github icon"></i>Contirbute Code</a>
+                        <a class="item">Careers</a>
+                        <a class="item">Privacy Policy</a>
+                    </div>
+                </div>
+                <div class="column enter aligned">
+                    <h3 class="ui header">Contact Us</h3>
+                    <addr>
+                        0900 Stratford upon Avon
+                        <br>Minneapolis, MN
+                        <br>
+                    </addr>
+                    <p>(404) 200-0500</p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <!-- endbower -->
+    <script src="bower_components/semantic/build/minified/modules/sidebar.min.js"></script>
+    <script src="bower_components/list.js/dist/list.min.js"></script>
+    <script src="bower_components/davis/davis.min.js"></script>
+    <script src="bower_components/es6-promise/dist/promise-0.1.1.min.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js({app,.tmp}) scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>
