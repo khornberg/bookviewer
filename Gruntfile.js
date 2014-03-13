@@ -106,7 +106,8 @@ module.exports = function (grunt) {
                     src: [
                         '.tmp',
                         '<%= config.dist %>/*',
-                        '!<%= config.dist %>/.git*'
+                        '!<%= config.dist %>/.git*',
+                        '<%= config.app %>/index.html'
                     ]
                 }]
             },
@@ -182,7 +183,7 @@ module.exports = function (grunt) {
             options: {
                 dest: '<%= config.dist %>'
             },
-            html: 'app/index.html'
+            html: '<%= config.app %>/index.html'
         },
 
         // Performs rewrites based on rev and the useminPrepare configuration
@@ -290,6 +291,13 @@ module.exports = function (grunt) {
                 dest: '.tmp/styles/',
                 src: '{,*/}*.css'
             },
+            'es6-promise': {
+                expand: true,
+                dot: true,
+                cwd: 'node_modules',
+                dest: '<%= config.app %>/bower_components/',
+                src: 'es6-promise/**'
+            },
             fonts: {
                 expand: true,
                 dot: true,
@@ -336,10 +344,39 @@ module.exports = function (grunt) {
             }
         },
 
+        'gh-pages': {
+            options: {
+                base: 'dist'
+            },
+            src: ['**']
+        },
+
+        manifest: {
+            generate: {
+                options: {
+                    basePath: '<%= config.dist %>',
+                    cache: [],
+                    network: ['http://*', 'https://*'],
+                    preferOnline: true,
+                    verbose: true,
+                    timestamp: true
+                },
+                src: [
+                    'books/*',
+                    'fonts/*',
+                    'scripts/*',
+                    'styles/*',
+                    '*.*'
+                ],
+                dest: '<%= config.dist %>/manifest.appcache'
+            }
+        },
+
         // Run some tasks in parallel to speed up build process
         concurrent: {
             server: [
-                'copy:styles'
+                'copy:styles',
+                'copy:es6-promise'
             ],
             test: [
                 'copy:styles'
@@ -403,11 +440,16 @@ module.exports = function (grunt) {
         'copy:fonts',
         'rev',
         'usemin',
-        'htmlmin'
+        'htmlmin',
+        'manifest'
     ]);
 
     grunt.registerTask('default', [
         'newer:jshint',
         'build'
+    ]);
+
+    grunt.registerTask('deploy', [
+        'gh-pages'
     ]);
 };

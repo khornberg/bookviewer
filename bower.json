@@ -2,7 +2,9 @@
   "name": "bookviewer",
   "private": true,
   "dependencies": {
-    "jquery": "~2.1.0"
+    "jquery": "~2.1.0",
+    "semantic": "~0.14.0",
+    "list.js": "~1.1.0"
   },
   "devDependencies": {}
 }
