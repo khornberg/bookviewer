@@ -29,7 +29,8 @@
     "grunt-json-to-html": "0.0.0",
     "grunt-include-replace": "~0.1.2",
     "grunt-gh-pages": "~0.9.1",
-    "grunt-manifest": "~0.4.0"
+    "grunt-manifest": "~0.4.0",
+    "grunt-mocha-phantomjs": "~0.4.3"
   },
   "engines": {
     "node": ">=0.8.0"

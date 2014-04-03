@@ -133,9 +133,14 @@ module.exports = function (grunt) {
             all: {
                 options: {
                     run: true,
-                    urls: ['http://<%= connect.test.options.hostname %>:<%= connect.test.options.port %>/index.html']
+                    urls: ['http://<%= connect.test.options.hostname %>:<%= connect.test.options.port %>/index.html'],
+                    log: true
                 }
             }
+        },
+
+        mocha_phantomjs: {
+            all: ['test/*.html']
         },
 
         // Add vendor prefixed styles
@@ -421,7 +426,8 @@ module.exports = function (grunt) {
 
         grunt.task.run([
             'connect:test',
-            'mocha'
+            // 'mocha',
+            'mocha_phantomjs'
         ]);
     });
 
@@ -446,6 +452,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('default', [
         'newer:jshint',
+        'test',
         'build'
     ]);
 
